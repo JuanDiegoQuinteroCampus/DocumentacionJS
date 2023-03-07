@@ -1,16 +1,11 @@
 /* STRINGS */
 
-/* String.prototype.trim()
+/* String.raw()
 
-El método trim( ) elimina los espacios en blanco en ambos extremos del string. Los espacios en blanco en este contexto, son todos los caracteres sin contenido (espacio, tabulación, etc.) y todos los caracteres de nuevas lineas (LF,CR,etc.). */
+String. raw() es la unica función de etiqueta incorporada en las plantillas string; trabaja igual que la función de la plantilla por defecto y ejecuta la concatenación. Incluso puedes reimplementarlo con código normal de JavaScript
+El método estatico String.raw() es una función de plantilla de literales (en-US), similar al prefijo r en Python o al prefijo @ en C# para strings literales (con ciertas diferencias: ver la explicación en este problema). Se utiliza para obtener un string crudo a partir de plantillas de string (es decir, el original, texto no interpretado). */
 
-
-let text = "     Hello World!     ";
-let result = text.trim();
-
-document.getElementById("demo1").innerHTML = text;
-document.getElementById("demo2").innerHTML = result;
-
-  /*    Hello World!     
-
-Hello World!         */
+String.raw`Hi\n${2+3}!`;
+//el carácter después de 'Hi'
+// no es un carácter de nueva línea,
+// '\' y 'n' son dos caracteres.
