@@ -1,12 +1,17 @@
 /* STRINGS */
 
-/* String.fromCharCode()
-El String.fromCharCode() método estático que devuelve una cadena creada mediante el uso de una secuencia de valores Unicode especificada.
-Este método devuelve una cadena y no un objeto String.
+/* String.prototype.concat()
 
-Debido a que fromCharCode es un método estático de String, usted siempre lo usará como String.fromCharCode(), en vez de un método de un objeto String creado por usted.
+El método concat() combina dos o más cadenas de texto y devuelve una cadena de texto nueva.
  */
-String.fromCharCode(65, 66, 67);   //devuelve "ABC"
-String.fromCharCode(0x2014);       //devuelve "-"
-String.fromCharCode(0x12014);      //también devuelve "-";el dígito 1 se trunca y se ignora
-String.fromCharCode(8212);         //también devuelve "-";8212 es la forma decimal de 0x2014
+const str1 = 'Hello';
+const str2 = 'World';
+
+console.log(str1.concat(' ', str2));
+// Expected output: "Hello World"
+
+console.log(str2.concat(', ', str1));
+// Expected output: "World, Hello"
+
+/* > "Hello World"
+> "World, Hello" */
