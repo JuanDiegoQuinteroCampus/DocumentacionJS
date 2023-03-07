@@ -1,8 +1,9 @@
 /* STRINGS */
 
-// Método repeat() // String.prototype.repeat()
-/* El método repeat() construye y devuelve una nueva cadena que contiene el número especificado de
-copias de la cadena en la cual fue llamada, concatenados. */
-let text = "Hello world!";
-let result = text.repeat(2); 
-/* Hello world!Hello world! */
+/* String.prototype.replace()
+
+El método replace() devuelve una nueva cadena con algunas o todas las coincidencias de un patrón , siendo cada una de estas coincidencias reemplazadas por remplazo . El patrón puede ser una cadena o una RegExp , y el reemplazo puede ser una cadena o una función que será llamada para cada coincidencia */
+
+let text = "Visit Microsoft!";
+let result = text.replace("Microsoft", "W3Schools"); 
+//Visit W3Schools //
