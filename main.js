@@ -1,15 +1,16 @@
 /* STRINGS */
 
-/* String.prototype.lastIndexOf()
+/* String.prototype.search()
 
-El método lastIndexOf() devuelve la posicion (indice) en la que se encuentra el valorBusqueda, dentro del objeto String que realiza la llamada, de la última ocurrencia del valor especificado; o -1 si no se halla. La búsqueda se realiza empezando por el final de la cadena que realiza la llamada, empezando en indiceDesde.
+El método search() ejecuta una búsqueda que encaje entre una expresión regular y el objeto String desde el que se llama.
+Cuando se desee saber en qué casos un patrón se encuentra en una cadena de texto utiliza search() (si sólo deseas saber si existe, utiliza el método test() del prototipo de RegExp); para más información (pero de ejecución más lenta) utiliza match() (similar al método exec() de las expresiones regulares).
+El search()método compara una cadena con una expresión regular **
 
-Los caracteres de una cadena se indexan de izquierda a derecha. El índice del primer carácter es 0, y el índice del último carácter es nombreCadena.length - 1.
- */
-let text = "Hello planet earth, you are a great planet.";
-let result = text.lastIndexOf("planet"); 
-/* 36 */
+El search()método devuelve el índice (posición) de la primera coincidencia.
 
-let text = "Hello planet earth, you are a great planet.";
-let result = text.lastIndexOf("Planet"); 
-/* -1 */
+El search()método devuelve -1 si no se encuentra ninguna coincidencia.
+
+El search()método distingue entre mayúsculas y minúsculas. */
+
+let text = "Mr. Blue has a blue house";
+let position = text.search("blue"); 
