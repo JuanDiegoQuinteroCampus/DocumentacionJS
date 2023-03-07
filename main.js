@@ -1,18 +1,8 @@
 /* STRINGS */
 
-/* String.prototype.slice()
-Extrae una sección de una cadena y devuelve una nueva cadena.
- El slice()método extrae una parte de una cadena.
+/* String.prototype.substring()
 
-El slice()método devuelve la parte extraída en una nueva cadena.
-
-El slice()método no cambia la cadena original.
-
-Los parámetros de inicio y fin especifican la parte de la cadena que se va a extraer.
-
-La primera posición es 0, la segunda es 1, ...
-
-Un número negativo selecciona desde el final de la cadena.*/
+es un método para extraer una subcadena de texto de una cadena más grande, dadas las posiciones inicial y final dentro de la cadena. Debido a que el método substring() es un método del objeto String, debe invocarse a través de una instancia particular de su clase.
+ */
 let text = "Hello world!";
-let result = text.slice(0, 5); 
-//Hello//
+let result = text.substring(1, 4); 
