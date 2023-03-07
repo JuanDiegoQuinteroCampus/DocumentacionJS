@@ -1,6 +1,16 @@
 /* STRINGS */
 
-/* String.prototype.toUpperCase()
+/* String.prototype.trim()
 
-El toUpperCase() método devuelve el valor convertido en mayúsculas de la cadena que realiza la llamada. */
-console.log( "alphabet".toUpperCase() ); // "ALPHABET"
+El método trim( ) elimina los espacios en blanco en ambos extremos del string. Los espacios en blanco en este contexto, son todos los caracteres sin contenido (espacio, tabulación, etc.) y todos los caracteres de nuevas lineas (LF,CR,etc.). */
+
+
+let text = "     Hello World!     ";
+let result = text.trim();
+
+document.getElementById("demo1").innerHTML = text;
+document.getElementById("demo2").innerHTML = result;
+
+  /*    Hello World!     
+
+Hello World!         */
