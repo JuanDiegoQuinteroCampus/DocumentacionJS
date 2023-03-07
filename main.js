@@ -1,9 +1,18 @@
 /* STRINGS */
 
-/* String.prototype.replace()
+/* String.prototype.slice()
+Extrae una sección de una cadena y devuelve una nueva cadena.
+ El slice()método extrae una parte de una cadena.
 
-El método replace() devuelve una nueva cadena con algunas o todas las coincidencias de un patrón , siendo cada una de estas coincidencias reemplazadas por remplazo . El patrón puede ser una cadena o una RegExp , y el reemplazo puede ser una cadena o una función que será llamada para cada coincidencia */
+El slice()método devuelve la parte extraída en una nueva cadena.
 
-let text = "Visit Microsoft!";
-let result = text.replace("Microsoft", "W3Schools"); 
-//Visit W3Schools //
+El slice()método no cambia la cadena original.
+
+Los parámetros de inicio y fin especifican la parte de la cadena que se va a extraer.
+
+La primera posición es 0, la segunda es 1, ...
+
+Un número negativo selecciona desde el final de la cadena.*/
+let text = "Hello world!";
+let result = text.slice(0, 5); 
+//Hello//
