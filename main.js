@@ -1,8 +1,12 @@
 /* STRINGS */
 
-/* String.prototype.substring()
+/* String.prototype.substr()
 
-es un método para extraer una subcadena de texto de una cadena más grande, dadas las posiciones inicial y final dentro de la cadena. Debido a que el método substring() es un método del objeto String, debe invocarse a través de una instancia particular de su clase.
- */
-let text = "Hello world!";
-let result = text.substring(1, 4); 
+El método substr() devuelve los caracteres de una cadena que comienzan en una localización especificada y de acuerdo al número de caracteres que se especifiquen. */
+const str = 'Mozilla';
+
+console.log(str.substr(1, 2));
+// Expected output: "oz"
+
+console.log(str.substr(2));
+// Expected output: "zilla"
