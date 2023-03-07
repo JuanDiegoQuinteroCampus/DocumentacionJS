@@ -1,17 +1,15 @@
 /* STRINGS */
 
-/* String.prototype.concat()
+/* String.prototype.indexOf()
 
-El método concat() combina dos o más cadenas de texto y devuelve una cadena de texto nueva.
- */
-const str1 = 'Hello';
-const str2 = 'World';
+El método indexOf() devuelve el índice, dentro del objeto String que realiza la llamada, de la primera ocurrencia del valor especificado, comenzando la búsqueda desde indiceDesde; o -1 si no se encuentra dicho valor.
 
-console.log(str1.concat(' ', str2));
-// Expected output: "Hello World"
+El indexOf()método devuelve la posición de la primera aparición de un valor en una cadena.
 
-console.log(str2.concat(', ', str1));
-// Expected output: "World, Hello"
+El indexOf()método devuelve -1 si no se encuentra el valor.
 
-/* > "Hello World"
-> "World, Hello" */
+El indexOf()método distingue entre mayúsculas y minúscula */
+
+
+let text = "Hello world, welcome to the universe.";
+text.indexOf("e", 5); 
