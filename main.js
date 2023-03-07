@@ -1,17 +1,20 @@
 /* STRINGS */
 
-/* String.length
-Propiedad obtiene el numero de caracteres de la cadena actual. representa la longitud de una cadena, en unidades de código UTF-16.
+/* String.prototype.charAt()
+ESte muestra los caracteres y sus diferentes localizaciones en la cadena */
 
- */
-string str = "abcdefg";
-Console.WriteLine("1) The length of '{0}' is {1}", str, str.Length);
-Console.WriteLine("2) The length of '{0}' is {1}", "xyz", "xyz".Length);
+var cualquierCadena="Brave new world";
 
-int length = str.Length;
-Console.WriteLine("3) The length of '{0}' is {1}", str, length);
+console.log("El carácter en el índice 0 es '" + cualquierCadena.charAt(0) + "'")
+console.log("El carácter en el índice 1 es '" + cualquierCadena.charAt(1) + "'")
+console.log("El carácter en el índice 2 es '" + cualquierCadena.charAt(2) + "'")
+console.log("El carácter en el índice 3 es '" + cualquierCadena.charAt(3) + "'")
+console.log("El carácter en el índice 4 es '" + cualquierCadena.charAt(4) + "'")
+console.log("El carácter en el índice 999 es '" + cualquierCadena.charAt(999) + "'")
 
-// This example displays the following output:
-//    1) The length of 'abcdefg' is 7
-//    2) The length of 'xyz' is 3
-//    3) The length of 'abcdefg' is 7
+/* El carácter en el índice 0 es 'B'
+El carácter en el índice 1 es 'r'
+El carácter en el índice 2 es 'a'
+El carácter en el índice 3 es 'v'
+El carácter en el índice 4 es 'e'
+El carácter en el índice 999 es '' */
