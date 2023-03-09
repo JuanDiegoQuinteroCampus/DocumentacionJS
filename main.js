@@ -1,17 +1,9 @@
 //Documentacion operadores//
 
-/* Math.PI */
-/* 
-La propiedad Math.PI representa la relacion entre la longitud de la circunferencia de un circulo y su diametro, la cual es aproximadamente 3.14159.
-Debido a que PI es una propiedad estatica del modulo Math, siempre debes de utilizarla como Math.PI, en lugar de una propiedad de un objeto Math que tu hayas creado ( Math no es un constructor ). */
+/* Math.max()
 
-function calculateCircumference(radius) {
-    return 2 * Math.PI * radius;
-  }
-  
-  console.log(Math.PI);
-  // Expected output: 3.141592653589793
-  
-  console.log(calculateCircumference(10));
-  // Expected output: 62.83185307179586
-  
+La función Math.max() retorna el mayor de cero o más números dados como parámetros de entrada, o NaN si cualquier parámetro no es un número y no puede ser convertido en uno.
+ elige el numero mas grande entre dos o mas */
+Math.max(10, 20);   //  20
+Math.max(-10, -20); // -10
+Math.max(-10, 20);  //  20
