@@ -1,17 +1,21 @@
 //Documentacion operadores//
 
-/* Math.floor()
+/* Math.round()
+La función Math.round()retorna el valor de un número redondeado al entero más cercano.
+Si la porción fraccionaría del número es 0.5 o mayor, el argumento es redondeado al siguiente número entero superior. Si la porción de la fracción del número es menor a 0.5, el argumento es redondeado al siguiente número entero inferior.
 
-Devuelve el máximo entero menor o igual a un número. En otras palabras de un numero decimal lo devuelve al menor numero entero y si pone un entero se deja igual
+Debido a que round() es un método estático de Math, siempre se debe utilizar como Math.round(), en vez de un método del objeto Math que ha creado. (Math no es un constructor)
+
+en otras palabras hace una aproximacion a un numero entero dependiendo del numero decimal
  */
-console.log(Math.floor(5.95));
-// Expected output: 5
+// Retorna el valor 20
+x = Math.round(20.49);
 
-console.log(Math.floor(5.05));
-// Expected output: 5
+// Retorna el valor 21
+x = Math.round(20.5);
 
-console.log(Math.floor(5));
-// Expected output: 5
+// Retorna el valor -20
+x = Math.round(-20.5);
 
-console.log(Math.floor(-5.05));
-// Expected output: -6
+// Retorna el valor -21
+x = Math.round(-20.51);
