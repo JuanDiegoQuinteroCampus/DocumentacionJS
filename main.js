@@ -1,56 +1,29 @@
 //Documentacion operadores//
 
-//Operadores aritméticos
-//Suma (+): Se suman dos numero o en lugar de esta se suman las cadenas en este caso produciendo una concatenacion Si alguno de los elementos a concatenar no es una cadena de texto, queda convertido a cadena: "AB" + 123 = "AB123"//
-3 + 2 = 5
-"A" + "B" = "AB"
-x= 5+8
-
-//
-
-//Resta (-)//
-//Halla la diferencia entre dos números. le quita la cantidad de numeros al otro//
-3-2 = 1
-(-1)-(-2) = 1
-
-//Negativo  (-)//
-//Indica el signo negativo de un número o una expresión en otras palabras indica que el numero esta por debajo de 0//
-
--5
--45
-
-//División (/)//
-//Divide dos números, obteniendo un cociente de coma flotante: 5 / 2 = 2.5//
-
-56/3
-
-//Módulo aritmético %//
-
-//Divide dos números, obteniendo un resto entero o sobrante//
-5 % 2 = 1
-
-//Multiplicación (*)//
-//multiplica los numeros pueden se diferente cantidad//
-56*3= 168
+//Operadores Logicos//
+//se utilizan normalmente con valores booleanos (lógicos); cuando lo son, devuelven un valor booleano. Sin embargo, los operadores && y || en realidad devuelven el valor de uno de los operandos especificados, por lo que si estos operadores se utilizan con valores no booleanos, pueden devolver un valor no booleano//
 
 
+//AND Lógico (&&)//
+//Devuelve expr1 si se puede convertir a false; de lo contrario, devuelve expr2. Por lo tanto, cuando se usa con valores booleanos, && devuelve true si ambos operandos son true; de lo contrario, devuelve false.//
+var a3 = false && true;     // f && t devuelve false
+var a4 = false && (3 == 4); // f && f devuelve false
+var a5 = 'Cat' && 'Dog';    // t && t devuelve Dog
 
-//Incrementos y decrementos (++   --)//
-//Incrementa o decrementa el valor de una variable numérica en una unidad. No puede aplicarse a un literal. Pueden darse dos casos:
+//OR lógico (||)//
+//Devuelve expr1 si se puede convertir a true; de lo contrario, devuelve expr2. Por lo tanto, cuando se usa con valores booleanos, || devuelve true si alguno de los operandos es true; si ambos son falsos, devuelve false.//
+var o3 =  true || false;    // t || f devuelve true
+var o4 = false || (3 == 4); // f || f devuelve false
+var o5 = 'Cat' || 'Dog';    // t || t devuelve Cat
 
-var A, B; B = 2; 
+//NOT lógico (!)//
+//Devuelve false si su único operando se puede convertir a true; de lo contrario, devuelve true.//
+var n1 = !true;  // !t devuelve false
+var n2 = !false; // !f devuelve true
+var n3 = !'Cat'; // !t devuelve false
 
-A =  ++B  
-A =  B++  
-
-//En el primer caso,  A = 3   Es decir, que el incremento de B ha sido el correcto, pero no así el segundo, en el que  A = 2. Esto se debe a que, en el primer caso, el incremento se efectúa antes de que la expresión sea evaluada, y en el segundo, se incrementa después de la evaluación según indica el orden de precedencia de los operadores (ver tabla al final de esta página). De igual forma, para decrementos:
-var A, B; B = 2; 
-
-A =  --B  
-A =  B--  
-
-//En el primer caso resulta:   A = 1   y en el segundo:   A = 2//
-
-
-
-
+//Exclusión lógica ^ (Xor).//
+//Establece una exclusión lógica de dos expresiones, es decir, que el resultado se dará evaluando una expresión u otra, y dará True si solamente una de ellas es True, lo que implica la exclusión de la otra.//
+El hierro es un metal = True.
+El hierro es duro = True.
+El hierro es un metal ^ El hierro es duro = False.
