@@ -1,19 +1,14 @@
 //Documentacion operadores//
 
-/* Math.random()
-La función Math.random() devuelve un número de coma flotante pseudo-aleatorio, comprendido en el rango de 0 a menor que 1 (es decir, incluido el 0 pero no el 1), con una distribución aproximadamente uniforme en este rango. Dicho rango puede ser ampliado hasta los valores deseados. La implementación selecciona la semilla inicial del algoritmo de generación de números aleatorios, no pudiendo ser esta elegida o restablecida por el usuario. 
-(Elije un numero aleatorio)
- */
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-  }
-  
-  console.log(getRandomInt(3));
-  // Expected output: 0, 1 or 2
-  
-  console.log(getRandomInt(1));
-  // Expected output: 0
-  
-  console.log(Math.random());
-  // Expected output: a number from 0 to <1
-  
+/* Math.sqrt()
+
+La función Math.sqrt() retorna la raíz cuadrada de un número, que es
+x ≥ 0 , M a t h . s q r t ( x ) = x = the unique y ≥ 0 such that y 2 = x 
+en otras palabras da a conocer el resultado d euna raiz */
+
+Math.sqrt(9); // 3
+Math.sqrt(2); // 1.414213562373095
+
+Math.sqrt(1);  // 1
+Math.sqrt(0);  // 0
+Math.sqrt(-1); // NaN
