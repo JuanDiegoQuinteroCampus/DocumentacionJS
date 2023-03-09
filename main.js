@@ -1,16 +1,25 @@
-//Documentacion operadores//
+/* Number.prototype.toFixed()
 
-/* Math.trunc()
+El método toFixed() formatea un número usando notación de punto fijo.
+ */
+function financial(x) {
+    return Number.parseFloat(x).toFixed(2);
+  }
+  
+  console.log(financial(123.456));
+  // Expected output: "123.46"
+  
+  console.log(financial(0.004));
+  // Expected output: "0.00"
+  
+  console.log(financial('1.23e+5'));
+  // Expected output: "123000.00"
 
-La función Math.trunc() devuelve la parte entera de un numero removiendo cualquier dígito decimal (dígitos situados después de la coma).
+  var numObj = 12345.6789;
 
-en otras palabras elimina la parte decimal */
+/* ------------------Mas entendible-------------------- */
 
-Math.trunc(13.37);    // 13
-Math.trunc(42.84);    // 42
-Math.trunc(0.123);    //  0
-Math.trunc(-0.123);   // -0
-Math.trunc('-1.123'); // -1
-Math.trunc(NaN);      // NaN
-Math.trunc('foo');    // NaN
-Math.trunc();         // NaN
+numObj.toFixed();       // Returns '12346': note rounding, no fractional part
+numObj.toFixed(1);      // Returns '12345.7': note rounding
+numObj.toFixed(6);      // Returns '12345.678900': note added zeros
+(1.23e+20).toFixed(2);  // Returns '123000000000000000000.00'
