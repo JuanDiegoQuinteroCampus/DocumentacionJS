@@ -1,9 +1,19 @@
 //Documentacion operadores//
 
-/* Math.max()
+/* Math.min()
 
-La función Math.max() retorna el mayor de cero o más números dados como parámetros de entrada, o NaN si cualquier parámetro no es un número y no puede ser convertido en uno.
- elige el numero mas grande entre dos o mas */
-Math.max(10, 20);   //  20
-Math.max(-10, -20); // -10
-Math.max(-10, 20);  //  20
+La función Math.min() devuelve el menor de cero o más números, en otras palabras hace la selecion del numero mas pequeño
+Si no se proporcionan argumentos, el resultado es Infinity.
+
+Si al menos uno de los argumentos no puede ser convertido a número, el resultado es NaN. */
+
+console.log(Math.min(2, 3, 1));
+// Expected output: 1
+
+console.log(Math.min(-2, -3, -1));
+// Expected output: -3
+
+const array1 = [2, 3, 1];
+
+console.log(Math.min(...array1));
+// Expected output: 1
