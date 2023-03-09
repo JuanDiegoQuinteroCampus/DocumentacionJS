@@ -1,14 +1,18 @@
 //Documentacion operadores//
 
-/* Math.sqrt()
+/* Math.ceil()
 
-La función Math.sqrt() retorna la raíz cuadrada de un número, que es
-x ≥ 0 , M a t h . s q r t ( x ) = x = the unique y ≥ 0 such that y 2 = x 
-en otras palabras da a conocer el resultado d euna raiz */
+La función Math.ceil() devuelve el entero mayor o igual más próximo a un número dado.
+En otras palabras cambia los numeros decimales a un numero entero mas proximo pero si se lo aplica a un numero entero va a quedar igual
+ */
+console.log(Math.ceil(.95));
+// Expected output: 1
 
-Math.sqrt(9); // 3
-Math.sqrt(2); // 1.414213562373095
+console.log(Math.ceil(4));
+// Expected output: 4
 
-Math.sqrt(1);  // 1
-Math.sqrt(0);  // 0
-Math.sqrt(-1); // NaN
+console.log(Math.ceil(7.004));
+// Expected output: 8
+
+console.log(Math.ceil(-7.004));
+// Expected output: -7
