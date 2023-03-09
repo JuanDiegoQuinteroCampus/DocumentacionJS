@@ -1,18 +1,17 @@
 //Documentacion operadores//
 
-/* Math.ceil()
+/* Math.floor()
 
-La función Math.ceil() devuelve el entero mayor o igual más próximo a un número dado.
-En otras palabras cambia los numeros decimales a un numero entero mas proximo pero si se lo aplica a un numero entero va a quedar igual
+Devuelve el máximo entero menor o igual a un número. En otras palabras de un numero decimal lo devuelve al menor numero entero y si pone un entero se deja igual
  */
-console.log(Math.ceil(.95));
-// Expected output: 1
+console.log(Math.floor(5.95));
+// Expected output: 5
 
-console.log(Math.ceil(4));
-// Expected output: 4
+console.log(Math.floor(5.05));
+// Expected output: 5
 
-console.log(Math.ceil(7.004));
-// Expected output: 8
+console.log(Math.floor(5));
+// Expected output: 5
 
-console.log(Math.ceil(-7.004));
-// Expected output: -7
+console.log(Math.floor(-5.05));
+// Expected output: -6
