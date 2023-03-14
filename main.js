@@ -2,40 +2,28 @@
 
 /* Tipos de funciones */
 
+/* 
+Funciones autoejecutables
 
-/* Callbacks 
+En Javascript es muy sencillo crear funciones autoejecutables. Básicamente, sólo tenemos que envolver entre paréntesis la función anónima
+ en cuestión (no necesitamos que tenga nombre, puesto que no la vamos a guardar) y luego, ejecutarla: */
 
-un callback (llamada hacia atrás) es pasar una función B por parámetro a una función A, de modo que la función A puede ejecutar esa función B 
-de forma genérica desde su código, y nosotros podemos definirlas desde fuera de dicha función: */
+// Función autoejecutable
+(function () {
+  console.log("Hola!!");
+})();
 
-// fB = Función B
-const fB = function () {
-  console.log("Función B ejecutada.");
-};
+// Función autoejecutable con parámetros
+(function (name) {
+  console.log(`¡Hola, ${name}!`);
+})("Manz");
 
-// fA = Función A
-const fA = function (callback) {
-  callback();
-};
+/* Ten en cuenta, que si la función autoejecutable devuelve algún valor con return, a diferencia de las funciones por expresión, 
+en este caso lo que se almacena en la variable es el valor que devuelve la función autoejecutada:
+ */
+const f = (function (name) {
+  return `¡Hola, ${name}!`;
+})("Manz");
 
-fA(fB);
-
-/* ---------------------------------------- */
-// fB = Función B (callback)
-const fB = function () {
-  console.log("Función B ejecutada.");
-};
-
-// fError = Función Error (callback)
-const fError = function () {
-  console.error("Error");
-};
-
-// fA = Función A
-const fA = function (callback, callbackError) {
-  const n = ~~(Math.random() * 5);
-  if (n > 2) callback();
-  else callbackError();
-};
-
-fA(fB, fError); // Si ejecutamos varias veces, algunas darán error y otras no
+f; // '¡Hola, Manz!`
+typeof f; // 'string'
