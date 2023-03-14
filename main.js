@@ -3,17 +3,39 @@
 /* Tipos de funciones */
 
 
-/* Funciones anónimas
+/* Callbacks 
 
-Las funciones anónimas o funciones lambda son un tipo de funciones que se declaran sin nombre de función 
-y se alojan en el interior de una variable y haciendo referencia a ella cada vez que queramos utilizarla:
- */// Función anónima "saludo"
-const saludo = function () {
-  return "Hola";
+un callback (llamada hacia atrás) es pasar una función B por parámetro a una función A, de modo que la función A puede ejecutar esa función B 
+de forma genérica desde su código, y nosotros podemos definirlas desde fuera de dicha función: */
+
+// fB = Función B
+const fB = function () {
+  console.log("Función B ejecutada.");
 };
 
-saludo; // ƒ () { return 'Hola'; }
-saludo(); // 'Hola'
-/* la última línea del ejemplo anterior, estamos ejecutando la variable, es decir, ejecutando la 
-función que contiene la variable. Sin embargo, en la línea anterior hacemos referencia a la variable 
-(sin ejecutarla, no hay paréntesis) y nos devuelve la función en sí. */
+// fA = Función A
+const fA = function (callback) {
+  callback();
+};
+
+fA(fB);
+
+/* ---------------------------------------- */
+// fB = Función B (callback)
+const fB = function () {
+  console.log("Función B ejecutada.");
+};
+
+// fError = Función Error (callback)
+const fError = function () {
+  console.error("Error");
+};
+
+// fA = Función A
+const fA = function (callback, callbackError) {
+  const n = ~~(Math.random() * 5);
+  if (n > 2) callback();
+  else callbackError();
+};
+
+fA(fB, fError); // Si ejecutamos varias veces, algunas darán error y otras no
