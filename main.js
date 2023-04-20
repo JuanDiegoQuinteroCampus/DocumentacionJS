@@ -1,31 +1,42 @@
-/* FormData()
+//CallBack
 
+let llamado =  (elLlamado) =>{
+    console.log("has llamado a facebook");
+    elLlamado();
+}
 
-Los objetos FormData le permiten compilar un conjunto de pares clave/valor para enviar mediante XMLHttpRequest. Están destinados principalmente para el envío de 
-los datos del formulario, pero se pueden utilizar de forma independiente con el fin de transmitir los datos tecleados. Los datos transmitidos estarán en el mismo 
-formato que usa el método submit() del formulario para enviar los datos si el tipo de codificación del formulario se establece en "multipart/form-data".
- */
-var formData = new FormData();
+function usuario() {
+    console.log("Se a recibido una notificacion de un llamada");
+}
 
-formData.append("username", "Groucho");
-formData.append("accountnum", 123456); // number 123456 is immediately converted to string "123456"
+llamado(usuario)
 
-/* Recuperando un objeto FormData de un formulario HTML
+/* Un callback es una función que se pasa como argumento a otra función y se invoca cuando se completa una operación asincrónica o cuando se produce algún evento.
 
-Para construir un objeto FormData que contenga los datos de un <form> existente, especifique ese elemento form cuando cree el objeto FormData:
- */
-var formData = new FormData(someFormElement);
+Los callbacks son una forma común de manejar operaciones asincrónicas en JavaScript y se utilizan en muchos contextos, como solicitudes HTTP, operaciones de lectura / escritura de archivos y eventos de usuario en la interfaz de usuario.
 
-/* Por ejemplo: */
+La forma más común de utilizar un callback es pasar una función como argumento a una función asíncrona y llamar a esa función dentro del cuerpo de la función asíncrona cuando se completa la operación asincrónica. */
 
-var formElement = document.getElementById("myFormElement");
-var request = new XMLHttpRequest();
-request.open("POST", "submitform.php");
-request.send(new FormData(formElement));
+//CallBack and Promises
 
-/* También puede añadir datos adicionales al objeto FormData antes de enviarlo. Así:
- */
-var formElement = document.getElementById("myFormElement");
-formData = new FormData(formElement);
-formData.append("serialnumber", serialNumber++);
-request.send(formData);
+let numUsuario = new Promise (function(resolve, reject){
+    let num = prompt("Dijite un Número del 1 al 10");
+    if (num == 5 ) {
+        resolve(num);
+    } else {
+        reject('El número puesto no es el indicado')
+    }
+});
+
+numUsuario
+.then(function(num) {
+    console.log("El Número correcto es el ",num, " tu eleccion a sido la correcta");
+})
+.catch(function(error, num) {
+    console.error(error);
+})
+
+/* Una promesa es un objeto que representa la eventual finalización (o falla) de una operación asíncrona y permite manejar el resultado cuando está disponible.
+
+Las promesas son una forma más elegante y estructurada de manejar operaciones asíncronas en JavaScript que los callbacks tradicionales, ya que permiten encadenar varias operaciones asíncronas de forma más legible y manejar errores de manera más eficiente. */
+
